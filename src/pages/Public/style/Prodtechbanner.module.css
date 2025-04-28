@@ -1,0 +1,92 @@
+/* Prodtechbanner.module.css - Versão simplificada */
+.prodtechbanner {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding-left: 0px;
+  color: white;
+  background-position: center;
+  background-size: cover;
+}
+
+.prodtechbannerContent {
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+  margin-left: 5%;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+  z-index: 2;
+}
+
+.prodtitle {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  max-width: 100%;
+}
+
+.prodsubtitle {
+  font-size: 20px;
+  margin-bottom: 30px;
+  max-width: 100%;
+  line-height: 1.6;
+}
+
+/* Media queries para responsividade */
+@media (max-width: 1024px) {
+  .prodtechbannerContent {
+    max-width: 500px;
+  }
+ 
+  .prodtitle {
+    font-size: 36px;
+  }
+ 
+  .prodsubtitle {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .prodtechbannerContent {
+    max-width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+ 
+  .prodtitle {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .prodtechbanner {
+    padding: 20px 0;
+    justify-content: flex-start;
+    padding-top: 100px;
+  }
+ 
+  .prodtechbannerContent {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+    padding: 15px;
+  }
+ 
+  .prodtitle {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+ 
+  .prodsubtitle {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+}

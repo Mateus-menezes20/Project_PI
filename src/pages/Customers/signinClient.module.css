@@ -1,0 +1,331 @@
+/* signinClient.module.css */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: #f5f5f7;
+  margin-left: 250px; /* Space for sidebar */
+  transition: margin 0.3s ease;
+  width: calc(100% - 250px); /* Ajusta a largura para considerar o sidebar */
+}
+
+.header {
+  background-color: #181c2e;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 100%; /* Alterado para ocupar o espaço disponível */
+  padding: 2rem;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.title {
+  color: #181c2e;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 800px; /* Limita a largura do formulário para melhor legibilidade */
+  margin: 0 auto; /* Centraliza o formulário dentro do card */
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #181c2e;
+}
+
+.radioGroup {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.radioLabel input[type="radio"] {
+  accent-color: #fbbf24;
+  cursor: pointer;
+}
+
+.input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  transition: border-color 0.3s ease;
+  width: 100%;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #fbbf24;
+  box-shadow: 0 0 0 2px rgba(251, 191, 36, 0.2);
+}
+
+.iconInput {
+  position: relative;
+  width: 100%;
+}
+
+.icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6b7280;
+}
+
+.iconInput input {
+  padding-left: 2.5rem;
+  width: 100%;
+}
+
+.submitButton {
+  background-color: #fbbf24;
+  color: #181c2e;
+  font-weight: 600;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 300px; /* Limita a largura do botão */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.submitButton:hover {
+  background-color: #f59e0b;
+  transform: translateY(-2px);
+}
+
+.submitButton:disabled {
+  background-color: #e5e7eb;
+  color: #9ca3af;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.error {
+  color: #ef4444;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 1.5rem 0;
+  color: #6b7280;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.divider::before {
+  margin-right: 1rem;
+}
+
+.divider::after {
+  margin-left: 1rem;
+}
+
+.loginLink {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.loginLink a {
+  color: #fbbf24;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.loginLink a:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries for Responsive Design */
+/* Large screens (laptops/desktops) */
+@media (max-width: 1200px) {
+  .container {
+    margin-left: 220px;
+    width: calc(100% - 220px);
+  }
+}
+
+/* Medium screens (tablets, small laptops) */
+@media (max-width: 1024px) {
+  .container {
+    margin-left: 0;
+    width: 100%;
+    padding-top: 80px; /* Account for mobile header */
+  }
+  
+  .card {
+    max-width: 95%;
+  }
+}
+
+/* Small screens (tablets) */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+    padding-top: 80px;
+  }
+  
+  .card {
+    padding: 1.5rem;
+    max-width: 95%;
+  }
+  
+  .title {
+    font-size: 1.3rem;
+  }
+  
+  .radioGroup {
+    gap: 1rem;
+  }
+  
+  .header h1 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Extra small screens (mobile phones) */
+@media (max-width: 480px) {
+  .container {
+    padding: 1rem;
+    padding-top: 70px;
+  }
+  
+  .card {
+    padding: 1rem;
+    border-radius: 0.4rem;
+  }
+  
+  .header {
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .header h1 {
+    font-size: 1.2rem;
+  }
+  
+  .title {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .input, .submitButton {
+    padding: 0.6rem 0.8rem;
+  }
+  
+  .radioGroup {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  
+  .radioLabel {
+    font-size: 0.85rem;
+  }
+  
+  .label {
+    font-size: 0.85rem;
+  }
+  
+  .form {
+    gap: 0.8rem;
+  }
+}
+
+/* Very small screens */
+@media (max-width: 320px) {
+  .container {
+    padding: 0.8rem;
+    padding-top: 65px;
+  }
+  
+  .card {
+    padding: 0.8rem;
+  }
+  
+  .header h1, .title {
+    font-size: 1rem;
+  }
+  
+  .input, .submitButton {
+    padding: 0.5rem 0.7rem;
+    font-size: 0.85rem;
+  }
+  
+  .icon {
+    font-size: 0.9rem;
+  }
+}
